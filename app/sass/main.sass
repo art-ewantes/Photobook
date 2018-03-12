@@ -1,0 +1,105 @@
+@import "../../node_modules/normalize.css/normalize.css"
+@import "grid"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "../sass/_mixins/pixeltoem"
+@import "../sass/_mixins/transition"
+@import "../sass/_mixins/placeholder"
+@import "buttons"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	// height: 100%
+	// min-height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $regular
+	overflow-x: hidden
+
+// sticky footer based on flexbox
+
+body
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+
+
+footer
+	margin-top: auto
+
+// sticky footer based on flexbox end
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+h1
+	position: relative
+	font-size: em(25)
+	font-family: $regular
+h2
+	position: relative
+	font-size: em(16)
+	font-weight: 400
+h3
+	position: relative
+	font-size: em(13)
+p
+	position: relative
+	font-size: em(12)
+	line-height: 25px
+
+a
+	color: #fff
+a:hover
+	text-decoration: none
+
+
+
+
+@import "media" 
