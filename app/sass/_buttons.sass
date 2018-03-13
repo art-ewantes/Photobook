@@ -1,0 +1,52 @@
+.btn
+	font-family: $thin
+	border: 1px solid $main_red
+	display: inline-block
+	line-height: 66px
+	letter-spacing: 1.2px
+	padding: 0 35px
+	font-size: em(26)
+	color: #ffffff
+	cursor: pointer
+	text-transform: uppercase
+	background-color: $main_red
+	text-decoration: none
+	@include border-radius(10px)
+	@include transition(ease-in 0.3s)
+	&:hover
+		@include transition(ease-out 0.3s)
+		background-color: transparent
+		color: $main_red
+	&:focus,
+	&:visited,
+	&:target
+		outline: none
+
+.btn-phone
+	position: relative
+	display: inline-block
+	background-color: $main_color
+	line-height: 35px
+	padding: 0 35px
+	font-size: em(16)
+	color: $default_color
+	text-decoration: none
+	@include border-radius(10px)
+	@include transition(ease-in 0.3s)
+	&:before
+		content: ""
+		position: absolute
+		left: 50%
+		@include translate (-50%, 0)
+		@include transition(ease-in 0.3s)
+		bottom: 8px
+		height: 1px
+		border-bottom: 1px dashed #000
+		width: 70%
+	&:hover
+		background-color: darken($main_color, 2%)
+		@include transition(ease-out 0.3s)
+		&:before
+			@include transition(ease-out 0.3s)
+			border: 1px dashed transparent
+	
