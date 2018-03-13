@@ -274,5 +274,108 @@ a:hover
 	display: block
 	text-align: center
 
+.ready-solution
+	padding: 30px 0 50px
+	.ready-solution-card
+		position: relative
+		max-width: 310px
+		margin: 0 auto
+		background-color: $main_color
+		@include border-radius(10px)
+		padding: 20px 5px 0
+		// height: 100%
+		margin-top: 50px
+		p
+			font-family: $light
+			font-size: em(15)
+			text-align: center
+			line-height: 1
+			margin: 0
+			padding: 15px 0
+			letter-spacing: 2px
+		h2
+			line-height: 1
+			margin: 0
+			padding: 0
+			text-align: center
+			margin-bottom: 20px
+			letter-spacing: 2px
+			font-size: em(20)
+		ul
+			padding: 0
+			margin: 0
+			list-style-type: none
+			margin-bottom: 50px
+			li
+				position: relative
+				padding-left: 25px
+				font-size: em(17)
+				line-height: 1
+				margin-bottom: 15px
+				font-family: $light
+				&:last-child
+					margin-bottom: 0
+				&:before
+					content: "\f058"
+					color: f8f8f8
+					font-family: FontAwesome
+					font-style: normal
+					font-weight: normal
+					text-decoration: inherit
+					position: absolute
+					left: 0
+					top: 50%
+					@include translate(0, -50%)
+		.card
+			padding: 10px
+			background-color: #fff
+		.price
+			display: block
+			text-align: center
+			font-family: $light
+			font-size: em(50)
+			line-height: 1
+	h1
+		text-align: center
+		line-height: 1
+		margin: 0
+		padding: 0
+	.best-seller
+		position: absolute
+		left: 50%
+		top: -19px
+		border: 1px solid transparent
+		background-color: $main_color
+		padding: 10px 30px
+		@include translate(-50%, 0)
+		&:after
+			content: ""
+			position: absolute
+			width: 0
+			height: 0
+			left: -2px
+			top: -2px
+			border: 10px solid transparent
+			border-left: 10px solid #fff 
+			border-top: 10px solid #fff
+		&:before
+			content: ""
+			position: absolute
+			width: 0
+			height: 0
+			right: -2px
+			top: -2px
+			border: 10px solid transparent
+			border-right: 10px solid #fff 
+			border-top: 10px solid #fff
+		span
+			display: block
+			line-height: 1
+			padding: 0
+			margin: 0
+			font-size: em(15)
+			color: $main_red
+			// font-family: $light
+			text-transform: uppercase
 
 @import "media" 
