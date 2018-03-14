@@ -1,4 +1,4 @@
-import { lightbox } from "./lightbox.js";
+import { lightBox } from "./lightbox.js";
 
 
-console.log(lightbox);
+lightBox.eventListener();
