@@ -28,6 +28,8 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/traceur/traceur.js',
+		'app/libs/system.js/dist/system.js',
 		'app/js/scrollToId.js',
 		'app/js/common.min.js'
 		])

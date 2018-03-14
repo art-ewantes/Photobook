@@ -1,0 +1,43 @@
+{
+  "_from": "systemjs-plugin-traceur",
+  "_id": "systemjs-plugin-traceur@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-ymi0X8hMOirEU5/pvbVUl24cNBg=",
+  "_location": "/systemjs-plugin-traceur",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "systemjs-plugin-traceur",
+    "name": "systemjs-plugin-traceur",
+    "escapedName": "systemjs-plugin-traceur",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/systemjs-plugin-traceur/-/systemjs-plugin-traceur-0.0.3.tgz",
+  "_shasum": "ca68b45fc84c3a2ac4539fe9bdb554976e1c3418",
+  "_spec": "systemjs-plugin-traceur",
+  "_where": "/Users/ewantes/Documents/learning/Photobook",
+  "bundleDependencies": false,
+  "dependencies": {
+    "traceur": "0.0.111"
+  },
+  "deprecated": false,
+  "description": "SystemJS Traceur Plugin ===",
+  "jspm": {
+    "dependencies": {
+      "traceur": "0.0.111",
+      "traceur-runtime": "0.0.111"
+    }
+  },
+  "jspmPackage": true,
+  "main": "plugin-traceur.js",
+  "name": "systemjs-plugin-traceur",
+  "registry": "jspm",
+  "version": "0.0.3"
+}

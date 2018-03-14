@@ -1,0 +1,26 @@
+{
+  "name": "Photobook",
+  "description": "Photobook - Second task",
+  "main": "index.js",
+  "authors": [
+    "Andrii Chabanov"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/art-ewantes/Photobook",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1 - 3"
+  },
+  "devDependencies": {
+    "traceur": "^0.0.111",
+    "system.js": "^0.21.0",
+    "traceur-runtime": "^0.0.111"
+  }
+}
