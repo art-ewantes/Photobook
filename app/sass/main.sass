@@ -564,4 +564,26 @@ a:hover
 [data-lightbox]
 	cursor: pointer
 
+.modal-control
+	position: absolute
+	left: 0
+	right: 0
+	top: 50%
+	@include translate(0, -50%)
+	.modal-next,
+	.modal-prev
+		position: absolute
+		top: 50%
+		@include translate(0, -50%)
+		cursor: pointer
+		.fa
+			font-size: em(30)
+			color: #fff
+	.modal-next
+		right: -20px
+	.modal-prev
+		left: -20px
+
+.disable
+	display: none
 @import "media" 
