@@ -54,6 +54,9 @@ class LightBox{
 	openModal(src){
 		$('.modal-body').append(`<img src="${src}">`);
 		$('.modal').addClass('opened');
+		$('.modal-dialog').addClass('animated fadeIn');
+		this.closeModalEsc();
+		this.closeModalByBackground();
 	}
 
 	// get image attr
@@ -73,8 +76,28 @@ class LightBox{
 	closeModal(){
 		$('.modal-body').empty();
 		$('.modal').removeClass('opened');
+		$('.modal-dialog').removeClass('animated fadeIn');
 	}
 
+	closeModalEsc(){
+		var self = this;
+		$(document).keyup(function(e) {
+			e.preventDefault()
+			if (e.keyCode == 27) {
+				self.closeModal();
+			}
+		});
+	}
+
+	closeModalByBackground(){
+		var self = this;
+		$('[data-lightbox-overlay]').click((e)=>{
+			e.preventDefault();
+			self.closeModal();
+		}).children().click(function(e){
+			e.stopPropagation();
+		});
+	}
 	
 	galleryNavigarion(arr, currentItem){
 		this.clickNext(arr, currentItem);
