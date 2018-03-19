@@ -10,11 +10,14 @@ class LightBox{
 		$(document).ready(()=>{
 			$('[data-lightbox]').each((i, val) => {
 				this.arrImages.push(val);
+				
 			});
 			this.initEvents(this.arrImages);
+			
+			this.switchLightbox();
 		});
 	}
-
+	
 	// init all elements with data attr
 
 	initEvents(arr){
@@ -22,6 +25,40 @@ class LightBox{
 			this.addEventListeners(val, i, arr);
 		});
 	}
+
+	// switching power lightbox
+
+	switchLightbox(){
+		var turnOn = $('[switcher] input').attr('checked', false);
+		var self = this;
+		$('[switcher]').click(()=>{
+			if(turnOn[0].checked == false){
+				turnOn[0].checked = self.turnOffLightBox(true);
+			}else{
+				turnOn[0].checked = self.turnOnLightbox(false);
+			}
+			return false;
+		})
+	}
+
+	// turnOff lightbox
+	turnOffLightBox(checked){
+		$(this.arrImages).each((i, val) => {
+			$(val).removeAttr('data-lightbox');
+		});
+		$(this.arrImages).off();
+		return checked;
+	}
+
+	// turnOn lightbox
+	turnOnLightbox(checked){
+		$(this.arrImages).each((i, val) => {
+			$(val).attr('data-lightbox', '');
+		});
+		this.initEvents(this.arrImages);
+		return checked;
+	}
+
 
 	// add event to all elements with data attr
 
