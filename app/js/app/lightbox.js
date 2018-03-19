@@ -10,11 +10,11 @@ class LightBox{
 		$(document).ready(()=>{
 			$('[data-lightbox]').each((i, val) => {
 				this.arrImages.push(val);
-				
 			});
 			this.initEvents(this.arrImages);
 			
-			this.switchLightbox();
+			// DEFAULT VAL: true === on lightBox, false === off lightbox
+			this.switchLightbox(true);
 		});
 	}
 	
@@ -28,9 +28,12 @@ class LightBox{
 
 	// switching power lightbox
 
-	switchLightbox(){
-		var turnOn = $('[switcher] input').attr('checked', false);
-		var self = this;
+	switchLightbox(on){
+		let turnOn = $('[switcher] input').attr('checked', !on);
+		let self = this;
+		if(turnOn[0].checked == true){
+			turnOn[0].checked = self.turnOffLightBox(true);
+		}
 		$('[switcher]').click(()=>{
 			if(turnOn[0].checked == false){
 				turnOn[0].checked = self.turnOffLightBox(true);
@@ -39,6 +42,7 @@ class LightBox{
 			}
 			return false;
 		})
+		return on;
 	}
 
 	// turnOff lightbox
