@@ -42,21 +42,21 @@ class LightBox{
 	}
 
 	// turnOff lightbox
-	turnOffLightBox(checked){
+	turnOffLightBox(check){
 		$(this.arrImages).each((i, val) => {
 			$(val).removeAttr('data-lightbox');
 		});
 		$(this.arrImages).off();
-		return checked;
+		return check;
 	}
 
 	// turnOn lightbox
-	turnOnLightbox(checked){
+	turnOnLightbox(check){
 		$(this.arrImages).each((i, val) => {
 			$(val).attr('data-lightbox', '');
 		});
 		this.initEvents(this.arrImages);
-		return checked;
+		return check;
 	}
 
 
